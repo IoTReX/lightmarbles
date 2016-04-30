@@ -4,7 +4,8 @@
   "description": "photosensor plus rx",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp build && node app.js"
   },
   "author": "Sam Julien",
   "license": "MIT",
@@ -13,9 +14,10 @@
     "dist": "./dist",
     "client": "./client",
     "vendorjs": [
+        "./node_modules/socket.io-client/socket.io.js",
         "./node_modules/jquery/dist/jquery.min.js",
-        "./node_modules/rx/dist/rx.all.min.js",
-        "./node_modules/marbelous/dist/marbelous.js"
+        "./node_modules/rxjs/bundles/Rx.umd.js",
+        "./node_modules/marbelous/dist/marbelous.js",
         "./node_modules/timbre/timbre.dev.js"
     ],
     "vendorcss": [
@@ -28,10 +30,8 @@
   },
   "dependencies": {
     "gulp-filter": "^2.0.2",
-    "gulp-header": "^1.2.2",
     "gulp-help": "^1.3.3",
     "gulp-if": "^1.2.5",
-    "gulp-minify-html": "^1.0.0",
     "hapi": "^13.2.1",
     "inert": "^3.2.0",
     "johnny-five": "^0.9.32",
@@ -50,34 +50,24 @@
     "del": "^0.1.3",
     "glob": "^4.2.1",
     "gulp": "^3.8.10",
-    "gulp-autoprefixer": "^2.0.0",
     "gulp-babel": "^5.2.1",
-    "gulp-bump": "^0.1.11",
-    "gulp-bytediff": "^0.2.0",
     "gulp-cache": "^0.2.4",
     "gulp-concat": "^2.4.2",
     "gulp-filter": "^1.0.2",
     "gulp-header": "^1.2.2",
     "gulp-help": "^1.3.0",
     "gulp-inject": "^1.0.2",
-    "gulp-jscs": "^1.3.0",
-    "gulp-jshint": "^1.9.0",
     "gulp-livereload": "^2.1.1",
     "gulp-load-plugins": "^0.7.1",
     "gulp-load-utils": "0.0.4",
     "gulp-minify-css": "^0.3.11",
-    "gulp-minify-html": "^0.1.6",
     "gulp-nodemon": "^1.0.4",
     "gulp-notify": "^2.0.1",
     "gulp-plumber": "^0.6.6",
-    "gulp-rev": "^2.0.1",
-    "gulp-rev-replace": "^0.3.1",
     "gulp-shell": "^0.2.10",
     "gulp-sourcemaps": "^1.2.8",
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
-    "jshint-stylish": "^1.0.0",
-    "lodash": "^2.4.1",
     "merge-stream": "^0.1.6",
     "minimist": "^1.1.0",
     "run-sequence": "^1.0.2"
