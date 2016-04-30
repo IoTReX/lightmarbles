@@ -14,7 +14,7 @@ function getServer(config) {
       path: '/{param*}',
       handler: {
         directory: {
-          path: 'public',
+          path: 'dist',
           listing: false,
           index: true
         }

@@ -1,5 +1,5 @@
-var getServer = require('./lib/server.js'),
-  getDecorateIO = require('./lib/device.js');
+var getServer = require('./server/server.js'),
+  getDecorateIO = require('./server/device.js');
 
 // Create a Server with the specified configurations
 var server = getServer();
