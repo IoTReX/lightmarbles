@@ -5,7 +5,7 @@ var Hapi = require('hapi'),
 function getServer(config) {
   var server = new Hapi.Server();
 
-  server.connection({ port: 8080 });
+  server.connection({ port: 8000 });
 
   server.register(Inert, function () {
 

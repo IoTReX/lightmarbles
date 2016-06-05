@@ -29,9 +29,6 @@ function getDecorateIO() {
           var data = this.value;
           socket.emit('photoData2', data);
         });
-
-        
-
       });
     });
   };

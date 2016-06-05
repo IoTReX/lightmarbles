@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8080', {reconnect: true});
+var socket = io.connect('http://localhost:8000', {reconnect: true});
 
 const recordObservation = Marbelous.createMarbleDisplay(document.getElementById('marbles-container'));
 
